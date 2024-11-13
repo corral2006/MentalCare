@@ -1,0 +1,62 @@
+mixin cards(claseImg__front,Titulo,puesto,descripcion,comentario,claseImg__back)
+      article.article__card
+        .face.article__card--front
+         span(class=claseImg__front)
+         h1=Titulo 
+         h3=puesto
+         p=descripcion
+        .face.article__card--back
+         span(class=claseImg__back)
+         p=comentario
+
+doctype html
+html(lang="pt")
+    head
+        meta(charset="UTF-8")
+        meta(name="robots" content="index, follow")
+        meta(name="author" content="OnTecla")
+        meta(name="description" content="Jornal da Escola Profitecla Coimbra")
+        meta(name="viewport" content="width=device-width, inictial-scale=1.0")
+        link(rel="stylesheet" href="../css/style.css")
+        link(rel="website icon" type="png" href="../imagenes/mini logo.png")
+        title Jornal OnTecla
+
+    body 
+
+     header
+        .header__img
+        a(href="../html de profi/index.html")
+         img.header__img--logo(src="../imagenes/Logo-actual.png", alt="Logo")
+        include componentes/header.pug
+
+     aside 
+      article.aside__texto
+        h1.aside__titulo Projeto PTs
+        
+        p.aside__parrafo O Projeto dos PTs é...
+
+
+     main 
+
+       h2.main__titulo Informação dos voluntarios
+       +cards("card__img card__img--Santino","Santino Corral","2AG", "Atualmente estou disponivel nas horas do almoço, sabados e domingos, mas avisem com 24h de antecendência. Consigo ajudar nas areas de: Contabilidade, Marketing, TIC, Metodos de Estudo, Oratoria e Linguagem Corporal (basico/medio).", "Estou neste projeto porque:", "card__img card__img--Rui--back")  
+
+       +cards("card__img card__img--Leticia","Letícia Cunha","2T", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "Estou neste projeto porque:", "card__img card__img--Cristiana--back")
+
+       +cards("card__img card__img--Carolina","Carolina Santos","2SJ", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "Estou neste projeto porque:", "card__img card__img--Santino--back")
+
+       +cards("card__img card__img--Ana","Ana Maria","2T", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "Estou neste projeto porque:", "card__img card__img--Maria--back")
+
+       +cards("card__img card__img--Mafalda","Mafalda Abreu", "1SJ", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "Estou neste projeto porque:", "card__img card__img--Núria--back")
+
+       +cards("card__img card__img--Cristiana","Cristiana Soares","1SJ", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "Estou neste projeto porque:", "card__img card__img--Léa--back")
+
+       +cards("card__img card__img--Constança","Constança Peralta","1CSD", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "Estou neste projeto porque:", "card__img card__img--Letícia--back")
+
+       +cards("card__img card__img--Adriana","Adriana Silva","1SJ", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "Estou neste projeto porque:", "card__img card__img--Carolina--back")
+
+       +cards("card__img card__img--Alicia","Alicia Cardoso","1SJ", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "Estou neste projeto porque:", "card__img card__img--Carolina--back")
+
+       +cards("card__img card__img--Joao","Jõao Pedro","1CSD", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "Estou neste projeto porque:", "card__img card__img--Carolina--back")
+      
+     include componentes/footer.pug
